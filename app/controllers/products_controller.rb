@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    @product.update(name: params[:name] || @product.name, price: params[:price] || product.price, quantity: params[:quantity] || product.quantity, in_stock: params[:in_stock] || product.in_stock)
+    @product.update(name: params[:name] || @product.name, price: params[:price] || @product.price, quantity: params[:quantity] || @product.quantity, in_stock: params[:in_stock] || @product.in_stock)
 
     render template: "products/show"
   end
@@ -33,4 +33,5 @@ class ProductsController < ApplicationController
     render json: {message: "Product deleted..."}
   end
 
-end
+end  
+
