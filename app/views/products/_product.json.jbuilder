@@ -1,5 +1,9 @@
 json.id product.id
-json.name product.name
+json.name product.name_list
 json.price product.price
 json.quantity product.quantity
 json.in_stock product.in_stock
+json.is_discounted product.is_discounted
+json.tax product.tax
+json.total product.total
+json.created_at product.friendly_created_at
