@@ -30,7 +30,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal "SlimShady", data["name"]
+    assert_equal ["SlimShady"], data["name"]
   end
 
   test "destroy" do

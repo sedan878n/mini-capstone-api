@@ -7,14 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 
+Product.destroy_all
+
 require 'faker'
 
-100.times do
+328.times do
   Product.create!(
     name: Faker::Commerce.product_name,
     price: Faker::Commerce.price(range: 5.0..500.0),
     quantity: Faker::Number.between(from: 1, to: 100),
-    in_stock: Faker::Boolean.boolean
+    in_stock: Faker::Boolean.boolean,
+    description: Faker::Lorem.paragraph(sentence_count: 8),
+    part_number: Faker::Alphanumeric.alphanumeric(number: 8).upcase,
+    tags: Faker::Marketing.buzzwords
   )
 end
+
+puts "Created 328 fake products!"
 #   end

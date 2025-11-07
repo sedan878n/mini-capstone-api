@@ -66,4 +66,7 @@ group :test do
 
   # Use for faker
   gem "faker"
+
+  #populate the seed file
+  gem "seed_dump"
 end

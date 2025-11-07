@@ -319,6 +319,9 @@ GEM
       logger
     rubyzip (3.2.1)
     securerandom (0.4.1)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     selenium-webdriver (4.38.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -411,6 +414,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.1.0)
   rubocop-rails-omakase
+  seed_dump
   selenium-webdriver
   solid_cable
   solid_cache
