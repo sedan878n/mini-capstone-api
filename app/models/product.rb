@@ -32,11 +32,11 @@ class Product < ApplicationRecord
           private
 
     def description_cannot_include_forbidden_words
-      forbidden_words = ["banned", "illegal", "test", "fake", "donald"]
+      forbidden_words = ["banned", "illegal", "fake", "donald"]
       return unless description
 
       if forbidden_words.any? { |word| description.downcase.include?(word)}
-      errors.add(:description, "The description contains a forbidden word")
+      errors.add(:description, "You used a forbidden word. You naughty kid")
       end
     end
 

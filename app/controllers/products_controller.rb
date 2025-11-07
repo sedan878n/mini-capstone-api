@@ -12,10 +12,15 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(name: params[:name], price: params[:price], quantity: params[:quantity], in_stock: params[:in_stock])
+    @product = Product.new(name: params[:name], price: params[:price], quantity: params[:quantity], in_stock: params[:in_stock], description: params[:description])
     
+    if @product.save
     render template: "products/show"
+    else
+    render json: @product.errors
+    end
   end
+    
 
   def update
     @product = Product.find(params[:id])
