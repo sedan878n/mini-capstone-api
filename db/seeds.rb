@@ -19,7 +19,9 @@ require 'faker'
     in_stock: Faker::Boolean.boolean,
     description: Faker::Lorem.paragraph(sentence_count: 8),
     part_number: Faker::Alphanumeric.alphanumeric(number: 8).upcase,
-    tags: Faker::Marketing.buzzwords
+    tags: Faker::Marketing.buzzwords,
+    supplier_id: "SUP-#{Faker::Number.number(digits: 5)}"
+
   )
 end
 

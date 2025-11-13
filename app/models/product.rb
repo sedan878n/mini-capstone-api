@@ -9,6 +9,10 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validate :description_cannot_include_forbidden_words
 
+    def Supplier
+      Supplier.find_by(id: supplier_id)
+    end 
+
     def name_list
      return name&.split(" ")
     end
