@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  #"resources :products" generates 7 standard RESTful routes for  ProductsController
+  resources :products
+
+
   get "/products/:id" => "products#show"
   get "/products" => "products#index"
   post "/products" => "products#create"
